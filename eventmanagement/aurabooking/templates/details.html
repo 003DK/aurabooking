@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Aura Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background: #6B46C1;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-title {
+            font-size: 28px;
+            color: #6B46C1;
+            margin-bottom: 10px;
+        }
+
+        .event-info {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: #FF6B6B;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #D54F4F;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Event Details</div>
+    <div class="container">
+        <h2 class="event-title" id="event-title">Music Concert</h2>
+        <p class="event-info" id="event-date"><strong>Date:</strong> April 15, 2025</p>
+        <p class="event-info" id="event-location"><strong>Location:</strong> City Auditorium</p>
+        <p class="event-info"><strong>Available Tickets:</strong> <span id="available-tickets">120</span></p>
+        <button class="btn" onclick="registerEvent()">Register</button>
+    </div>
+
+    <script>
+        function registerEvent() {
+            // Redirect to the payment page after clicking "Register"
+            window.location.href = "http://127.0.0.1:8000/guest/eventdetails/payment";
+        }
+    </script>
+</body>
+</html>
